@@ -11,7 +11,7 @@ let MovieBox = ({title, poster_path, release_date, overview}) => {
                 <img className="h-auto max-w-full rounded-lg" src ={API_IMG + poster_path} alt=""/>
             </div>
             <div className="flex justify-center">
-                <Modal/>
+                <Modal title = {title} image = {API_IMG + poster_path} dateRelease={release_date} overview={overview}/>
             </div>
             {/* <h1>{title}</h1>
             <h2>{release_date}</h2>
