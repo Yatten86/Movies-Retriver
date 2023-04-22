@@ -22,6 +22,8 @@ function App() {
       <div className='grid'>
         {movies.map((movieReq)=>
         <MovieBox key={movieReq.id} {...movieReq}/>)}
+
+        <h1>test</h1>
       </div>
     </div>
   );
