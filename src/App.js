@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import MovieBox from './pages/MovieBox';
+import NavBar from "./pages/NavBar";
+
+
+
 
 const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=a40907a09d30859d9dad7c652801cc71";
 
@@ -18,12 +22,16 @@ function App() {
   },[])
 
   return (
-    <div className='container'>
-      <div className='grid'>
-        {movies.map((movieReq)=>
-        <MovieBox key={movieReq.id} {...movieReq}/>)}
-      </div>
-    </div>
+      <>
+        <NavBar/>
+
+        <div className='container'>
+          <div className='grid'>
+            {movies.map((movieReq)=>
+            <MovieBox key={movieReq.id} {...movieReq}/>)}
+          </div>
+        </div>
+      </>
   );
 }
 
